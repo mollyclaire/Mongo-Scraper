@@ -15,15 +15,14 @@
 {{! Main Header Image }}
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Mongo-Scraper</h1>
-    <p class="lead">Review the latest articles from ArtNews.</p>
+    <h1 class="display-4">Saved Articles</h1>
+    <p class="lead">Review and add notes to your saved articles from ArtNews.</p>
   </div>
 </div>
 
 {{! Articles }}
 <div id="articles">
     {{#each articles}}
-        {{> article }}
+        {{> saved-article }}
     {{/each}}
 </div>
-
