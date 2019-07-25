@@ -135,6 +135,17 @@ app.post("/articles/:id", function(req, res) {
       });
   });
 
+// Deletes one note
+app.post("/deleteNote/:id", function(req, res){
+    db.Note.remove({"_id": req.params.id})
+      .then(function(result){
+        res.json(result);
+      })
+      .catch(function(err) { 
+        res.json(err) 
+      });
+});
+
 // Clears all articles
 // app.get("/clearall", function(req, res) {
 //     db.Article.remove({})

@@ -53,3 +53,16 @@ $(".save-note").on("click", function() {
     });
 
 });
+
+// Click function for deleting one note
+$(".deleteNote").on("click", function() {
+    var thisId = $(this).attr("data-note-id");
+    $.ajax({
+        method: "POST",
+        url: "/deleteNote/" + thisId,
+      }).then(function(data) {
+          // Log the response
+          console.log(data);
+          window.location = "/saved"
+        })
+})

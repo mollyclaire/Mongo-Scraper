@@ -1,5 +1,5 @@
 .jumbotron {
-    background-image: url("../images/newspaper.jpg");
+    background-image: url("../images/newspaper.png");
     background-size: cover;
     height: 25rem;
 }
@@ -10,5 +10,26 @@
 
 h1 {
    font-size: 5rem !important;
+   color: whitesmoke;
+}
+
+.lead {
+    color: whitesmoke;
+}
+
+.save {
+    margin-top: 2%;
+}
+
+.delete {
+    margin-top: 2%;
+}
+
+.addNote {
+    margin-top: 1%;
+}
+
+.deleteNote {
+    margin-bottom: 2%;
 }
 

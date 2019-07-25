@@ -12,8 +12,9 @@
                 {{#each notes}}
                     <div class="panel panel-default">
                         <div class="panel-body">
+                            <h4>Previous Note:</h4>
                             <p class="previousNotes">{{body}}</p>
-                            <button type="button" class="btn btn-danger deleteNote" data-note-id={{_id}}>X</button>
+                            <button type="button" class="btn btn-dark deleteNote" data-note-id={{_id}}>Delete Note</button><br>
                         </div>
                     </div>
                 {{/each}}
