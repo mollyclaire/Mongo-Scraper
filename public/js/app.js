@@ -4,7 +4,7 @@ $(".save").on("click", function() {
     $.ajax({
         method: "POST",
         url: "/saved/" + thisId
-    }).done(function(data) {
+    }).then(function(data) {
         window.location = "/"
     })
 });
@@ -15,7 +15,7 @@ $(".delete").on("click", function() {
     $.ajax({
         method: "POST",
         url: "/delete/" + thisId
-    }).done(function(data) {
+    }).then(function(data) {
         window.location = "/"
     })
 });
@@ -25,7 +25,7 @@ $("#scrape").on("click", function() {
     $.ajax({
         method: "GET",
         url: "/scraped",
-    }).done(function(data) {
+    }).then(function(data) {
         console.log(data)
         window.location = "/"
     })
@@ -38,11 +38,12 @@ $(".save-note").on("click", function() {
     var thisId = $(this).attr("data-id");
     $.ajax({
         method: "POST",
-        url: "/articles" + thisId,
+        url: "/articles/" + thisId,
         data: {
-          text: $("#noteText" + thisId).val()
+          body: $("#noteText" + thisId).val()
+        //   body: $("#noteText").val()
         }
-      }).done(function(data) {
+      }).then(function(data) {
           // Log the response
           console.log(data);
           // Empty the notes section

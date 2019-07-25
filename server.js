@@ -82,7 +82,9 @@ res.send("Scrape Complete");
 
 // Displays specified saved articles
 app.get("/saved", function(req, res) {
-    db.Article.find({"saved": true}).then(function(result){
+    db.Article.find({"saved": true})
+        .populate("notes")
+        .then(function(result){
         var hbsObject = { articles: result };
         res.render("saved",hbsObject);
     }).catch(function(err){ res.json(err) });

@@ -1,0 +1,14 @@
+.jumbotron {
+    background-image: url("../images/newspaper.jpg");
+    background-size: cover;
+    height: 25rem;
+}
+
+.container {
+    margin-top: 5rem;
+}
+
+h1 {
+   font-size: 5rem !important;
+}
+
