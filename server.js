@@ -36,7 +36,7 @@ app.set("view engine", "handlebars");
 
 // Connecting to the Mongo DB
 // mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoartnews";
 
 mongoose.connect(MONGODB_URI);
 
